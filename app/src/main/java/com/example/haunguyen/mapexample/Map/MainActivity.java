@@ -97,6 +97,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        tracker.startListening();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        tracker.stopListening();
+    }
+
     private void startLocationTracking(){
         tracker = new LocationTracker(getApplicationContext()) {
             @Override
