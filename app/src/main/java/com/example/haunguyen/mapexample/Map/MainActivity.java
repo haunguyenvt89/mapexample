@@ -244,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void showSettingsAlert() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext());
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 
         // Setting DialogHelp Title
         alertDialog.setTitle("GPS is settings");
